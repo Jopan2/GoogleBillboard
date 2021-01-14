@@ -24,35 +24,4 @@ public void setup(){
         }
     }
 }  
-public void draw()
-{   
-	//not needed for this assignment
-}  
-public boolean isPrime(double num){
-    // small numbers not prime
-    if(num < 2){
-        return false;
-    }
-    // fix for decimal at beginning
-    if(num < 3){
-        num *= 100000000;
-    }
-    //loop for checking for factors
-    for(int i = 2; i <= Math.sqrt(num); i++){
-        if(num % i == 0){
-            return false;
-        }
-    }
-    return true;
-}
-public boolean addsTo49(String num){
-    int sum = 0;
-    for(int i = 0; i < 10; i++){
-        String newNum = num.substring(i,i+1);
-        sum += Double.parseDouble(newNum);
-    }
-    if(sum == 49){
-        return true;
-    }
-    return false;
-}
+
